@@ -1,0 +1,64 @@
+POST http://localhost:8000/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "customer_id": "steve5@gmail.com",
+    "password_hash": "password",
+    "bedrooms": 2,
+    "property_type": "flat",
+    "address": "3 Windermere, Leicester, LE27GU",
+    "evc": "RVA7DZ2D"
+}
+
+###
+
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "customer_id": "gse@shangrila.gov.un",
+    "password_hash": "gse@energy"
+}
+
+###
+GET http://localhost:8000/customer/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImN1c3RvbWVyX2lkIjoiZ3NlQHNoYW5ncmlsYS5nb3YudW4iLCJiYWxhbmNlIjo0MDB9LCJpYXQiOjE2NzM4NzUwOTksImV4cCI6MTY3Mzg3Njg5OX0.jvQFh1XLGQM0nHmqtkB6pBJbNLdxyiCGYfzlNN9Szf0
+
+###
+
+GET http://localhost:8000/customer/readings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImN1c3RvbWVyX2lkIjoidGVzdEBnbWFpbC5jb20ifSwiaWF0IjoxNjczNzk1ODQ3LCJleHAiOjE2NzM3OTc2NDd9.Z9LNfQmnXgJm3SF4XR-CaLs5j6-3ST00jDXC_Tk1YtQ
+
+###
+POST http://localhost:8000/customer/readings/new
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImN1c3RvbWVyX2lkIjoidGVzdEBnbWFpbC5jb20ifSwiaWF0IjoxNjczODAwMzExLCJleHAiOjE2NzM4MDIxMTF9.njB1z-RM4CAqUWwHAIccfECT1FDgfkt-XtBsg0rOKsA
+Content-Type: application/json
+
+{
+    "day": 401,
+    "night":502,
+    "gas": 1000,
+    "date": "2023-01-19"
+}
+
+###
+GET http://localhost:8000/customer/readings/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImN1c3RvbWVyX2lkIjoidGVzdEBnbWFpbC5jb20ifSwiaWF0IjoxNjczODAwMzExLCJleHAiOjE2NzM4MDIxMTF9.njB1z-RM4CAqUWwHAIccfECT1FDgfkt-XtBsg0rOKsA
+
+
+###
+POST http://localhost:8000/customer/topup
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImN1c3RvbWVyX2lkIjoiZ3NlQHNoYW5ncmlsYS5nb3YudW4iLCJiYWxhbmNlIjoyMDB9LCJpYXQiOjE2NzM4NjczMDMsImV4cCI6MTY3Mzg2OTEwM30.7IMMTcDsnsSzsdFMZzhqaT6BP4QQkgLL9cdiAEO0DLY
+Content-Type: application/json
+
+{
+    "code": "RVA7DZ2D"
+}
+
+###
+
+GET http://localhost:8000/admin/readings/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImN1c3RvbWVyX2lkIjoiZ3NlQHNoYW5ncmlsYS5nb3YudW4iLCJiYWxhbmNlIjo0MDB9LCJpYXQiOjE2NzM4NzI5ODksImV4cCI6MTY3Mzg3NDc4OX0.llGEv1R_1IQYb1SEIobhgFHZmrBlT1e80w0e6UfsRMM
+
+###
+GET http://localhost:8000/igse/propertycount

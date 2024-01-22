@@ -1,0 +1,31 @@
+.login{
+    max-height: 100vh;
+    max-width: 100vw;
+    
+}
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 460px;
+    background: #acbdc1;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px 0px rgb(5, 49, 57);
+
+
+}
+label{
+    text-align: left;
+    padding: 0.25rem 0;
+}
+
+.loginContainer >input,button{
+    padding: 2px;
+    margin: 2px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
